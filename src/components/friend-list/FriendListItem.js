@@ -1,21 +1,21 @@
-import PropTypes from 'prop-types';
-import s from './FriendList.module.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import s from './FriendList.module.css'
 
-function FriendListItem({ avatar, name, isOnline, type }) {
+function FriendListItem({ avatar, name, isOnline }) {
   return (
     <div>
-      <span className={isOnline ? ` ${s[type]} ` : ` ${s[type]}`}></span>
+      <span className={isOnline ? s.statusOnline : s.statusOfline}>User</span>
       <img className="avatar" src={avatar} alt={name} width="48" />
       <p className="name">{name}</p>
     </div>
-  );
+  )
 }
 
 FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  // isOnline: PropTypes.bool.isRequired,
-  type: PropTypes.oneOf(['statusOnline', 'statusOfline']),
-};
+  isOnline: PropTypes.bool.isRequired,
+}
 
-export default FriendListItem;
+export default FriendListItem
