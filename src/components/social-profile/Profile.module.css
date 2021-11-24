@@ -1,18 +1,53 @@
 .profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid grey;
+  width: 300px;
+  padding-top: 20px;
 }
 
-.description {
+.description p {
+  /* composes: profile; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .avatar {
   width: 200px;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 35px;
 }
 
 .stats {
+  display: flex;
+}
+.stats li {
+  display: flex;
+  padding: 0 24px;
+  border: 1px solid grey;
+  align-items: center;
+  flex-direction: column;
 }
 
 .label {
+  margin-bottom: 5px;
 }
 
 .quantity {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
 }

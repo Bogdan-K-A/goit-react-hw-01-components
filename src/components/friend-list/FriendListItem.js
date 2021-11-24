@@ -4,11 +4,11 @@ import s from './FriendList.module.css'
 
 function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <div>
-      <span className={isOnline ? s.statusOnline : s.statusOfline}>User</span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
-    </div>
+    <>
+      <span className={isOnline ? s.statusOnline : s.statusOfline}></span>
+      <img className={s.avatar} src={avatar} alt={name} width="48" />
+      <p className={s.name}>{name}</p>
+    </>
   )
 }
 
