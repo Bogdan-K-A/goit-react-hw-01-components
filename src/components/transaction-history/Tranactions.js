@@ -1,1 +1,19 @@
-// export default Transaction
+import PropTypes from 'prop-types'
+
+const Transaction = ({ type, amount, currency }) => {
+  return (
+    <>
+      <th>{type}</th>
+      <th>{amount}</th>
+      <th>{currency}</th>
+    </>
+  )
+}
+
+Transaction.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+}
+
+export default Transaction
