@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
-import Transaction from './Tranactions'
-import './Tranactions.modules.css'
+import './Transactions.modules.css'
 
 function TranactionList({ items }) {
   return (
@@ -14,13 +13,11 @@ function TranactionList({ items }) {
       </thead>
 
       <tbody>
-        {items.map((el) => (
-          <tr key={el.id}>
-            <Transaction
-              type={el.type}
-              amount={el.amount}
-              currency={el.currency}
-            />
+        {items.map(({ id, type, amount, currency }) => (
+          <tr key={id}>
+            <th>{type}</th>
+            <th>{amount}</th>
+            <th>{currency}</th>
           </tr>
         ))}
       </tbody>

@@ -1,3 +1,7 @@
+table {
+  margin-top: 50px;
+}
+
 .transactionHistory tr {
   background-color: rgb(218, 214, 214);
 }
